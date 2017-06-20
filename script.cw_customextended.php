@@ -8,9 +8,9 @@
 defined('_JEXEC') or die('Restricted access');
  
 /**
- * Script file of Whatever module
+ * Script file of Custom Extended module
  */
-class mod_cw_whateverInstallerScript
+class mod_cw_customextendedInstallerScript
 {
     /**
      * method to install the component
