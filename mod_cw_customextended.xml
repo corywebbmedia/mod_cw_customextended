@@ -10,8 +10,6 @@
     <version>1.0.1</version>
     <description>MOD_CW_CUSTOMEXTENDED_XML_DESCRIPTION</description>
 
-    <customContent />
-
     <files>
         <filename module="mod_cw_whatever">mod_cw_whatever.php</filename>
         <folder>tmpl</folder>
@@ -23,6 +21,15 @@
 
     <config>
         <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="text"
+                    type="editor"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_TEXT_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_TEXT_DESC"
+                    width="100%"
+                    filter="safehtml" />
+            </fieldset>
             <fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
                 <field
                     name="prepare_content"

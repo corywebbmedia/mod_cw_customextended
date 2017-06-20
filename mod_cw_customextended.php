@@ -9,15 +9,15 @@ defined('_JEXEC') or die;
 // Include the helper class
 require_once __DIR__ . '/helper.php';
 
-$helper = new ModCwCustomextendedHelper(&$params);
+$helper = new ModCwCustomextendedHelper($params);
+$content = $params->get('text');
 
 // Prepare content if that is selected
 if ($params->def('prepare_content', 1))
 {
     JPluginHelper::importPlugin('content');
-    $module->content = JHtml::_('content.prepare', $module->content, '', 'mod_cw_customextended.content');
+    $content = JHtml::_('content.prepare', $content, '', 'mod_cw_customextended.content');
 }
-
 
 // Get the module class suffix
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
