@@ -1,40 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.4" client="site" method="upgrade">
-    <name>mod_cw_whatever</name>
+    <name>mod_cw_customextended</name>
     <author>Cory Webb</author>
-    <creationDate>November 2015</creationDate>
-    <copyright>Copyright (C) 2015-2016 Cory Webb Media, LLC. All rights reserved.</copyright>
+    <creationDate>June 2017</creationDate>
+    <copyright>Copyright (C) 2017 Cory Webb Media, LLC. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>joomla@corywebbmedia.com</authorEmail>
     <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
     <version>1.0.1</version>
-    <description>MOD_CW_WHATEVER_XML_DESCRIPTION</description>
+    <description>MOD_CW_CUSTOMEXTENDED_XML_DESCRIPTION</description>
+
+    <customContent />
 
     <files>
         <filename module="mod_cw_whatever">mod_cw_whatever.php</filename>
         <folder>tmpl</folder>
     </files>
     <languages>
-        <language tag="en-GB">en-GB.mod_cw_whatever.ini</language>
-        <language tag="en-GB">en-GB.mod_cw_whatever.sys.ini</language>
+        <language tag="en-GB">en-GB.mod_cw_customextended.ini</language>
+        <language tag="en-GB">en-GB.mod_cw_customextended.sys.ini</language>
     </languages>
 
     <config>
         <fields name="params">
-            <fieldset name="basic">
+            <fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+                <field
+                    name="prepare_content"
+                    type="radio"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_PREPARE_CONTENT_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_PREPARE_CONTENT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    name="backgroundimage"
+                    type="media"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_BACKGROUNDIMAGE_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_BACKGROUNDIMAGE_DESC"
+                />
+                <field
+                    name="displayimage1"
+                    type="media"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGEONE_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGEONE_DESC"
+                />
+                <field
+                    name="displayimage2"
+                    type="media"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGETWO_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGETWO_DESC"
+                />
+                <field
+                    name="displayimage3"
+                    type="media"
+                    label="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGETHREE_LABEL"
+                    description="MOD_CW_CUSTOMEXTENDED_FIELD_DISPLAYIMAGETHREE_DESC"
+                />
+                <field name="attributes"
+                    type="repeatable"
+                    icon="picture"
+                    select="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_SELECT"
+                    description="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_DESC"
+                    label="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_LABEL"
+                    filter="raw">
+                    <fieldset hidden="true" name="attributes_modal" repeat="true">
+                        <field name="key"
+                            type="text"
+                            label="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_KEY_LABEL"
+                            description="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_KEY_DESC"
+                            default="" />
+                        <field name="value"
+                            type="text"
+                            label="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_VALUE_LABEL"
+                            description="MOD_CW_CUSTOMEXTENDED_ATTRIBUTES_VALUE_DESC"
+                            default="" />
+                    </fieldset>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
                 <field
                     name="layout"
                     type="modulelayout"
                     label="JFIELD_ALT_LAYOUT_LABEL"
                     description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
-                <field
-                    name="whatever"
-                    type="textarea"
-                    default=""
-                    label="MOD_CW_WHATEVER_FIELD_WHATEVER_LABEL"
-                    description="MOD_CW_WHATEVER_FIELD_WHATEVER_DESC" />
-            </fieldset>
-            <fieldset name="advanced">
                 <field
                     name="moduleclass_sfx"
                     type="textarea" rows="3"

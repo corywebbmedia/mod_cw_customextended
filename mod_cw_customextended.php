@@ -6,10 +6,20 @@
 
 defined('_JEXEC') or die;
 
-// Get the whatever parameter
-$whatever = $params->get('whatever');
+// Include the helper class
+require_once __DIR__ . '/helper.php';
+
+$helper = new ModCwCustomextendedHelper(&$params);
+
+// Prepare content if that is selected
+if ($params->def('prepare_content', 1))
+{
+    JPluginHelper::importPlugin('content');
+    $module->content = JHtml::_('content.prepare', $module->content, '', 'mod_cw_customextended.content');
+}
+
 
 // Get the module class suffix
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_cw_whatever', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_cw_customextended', $params->get('layout', 'default'));
