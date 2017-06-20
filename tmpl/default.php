@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
 
 ?>
 <div class="cw-customextended custom<?php echo $moduleclass_sfx; ?>" <?php if ($params->get('backgroundimage')) : ?> style="background-image:url(<?php echo $params->get('backgroundimage'); ?>)"<?php endif; ?> >
-    <?php echo $content; ?>
+    <?php echo $text; ?>
 
     <?php if ($params->get('displayimage1', '') || $params->get('displayimage2', '') || $params->get('displayimage3', '')) : ?>
     <div class="display-images">
