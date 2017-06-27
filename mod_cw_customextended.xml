@@ -6,7 +6,7 @@
     <copyright>Copyright (C) 2017 Cory Webb Media, LLC. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>joomla@corywebbmedia.com</authorEmail>
-    <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
+    <authorUrl>https://cwextensions.com</authorUrl>
     <version>1.0.1</version>
     <description>MOD_CW_CUSTOMEXTENDED_XML_DESCRIPTION</description>
 
@@ -131,6 +131,6 @@
     </config>
 
     <updateservers>
-        <server type="extension" name="CW Whatever Module Updates"><![CDATA[https://corywebbmedia.com/cw-customextended-module-update-stream/?view=update&dummy=extension.xml]]></server>
+        <server type="extension" name="CW Custom Extended Module Updates"><![CDATA[https://cwextensions.com/cw-customextended-module-update-stream/?view=update&dummy=extension.xml]]></server>
     </updateservers>
 </extension>
